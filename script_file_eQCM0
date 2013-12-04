@@ -1,0 +1,13 @@
+#PBS -N eQCMDefault0
+#PBS -j oe
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=96:00:00
+#PBS -S /bin/ksh
+
+set -x
+
+cd $PBS_O_WORKDIR
+
+#
+./bin/eQCM ./datasets/WeightedUndirectedGraph0.dat ./results/WeightedUndirectedGraph0_patterns.txt
+#
